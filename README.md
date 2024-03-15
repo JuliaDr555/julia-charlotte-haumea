@@ -1,2 +1,2 @@
-# julia-charlotte-haumea
-portfolio project for Intro to Programming course with Code the Dream
+<h1> Julia Drits </h1>
+
