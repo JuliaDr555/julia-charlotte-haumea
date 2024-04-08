@@ -6,7 +6,7 @@
 
 h2 {
     font-weight: bold;
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 a {
@@ -15,7 +15,7 @@ a {
 
 body {
     height: 100vh;
-    background-color: aquamarine;
+    background-color: rgba(193, 251, 233, 0.994);
     /* font-family: "Ysabeau Infant", sans-serif; */
     font-family: "Roboto", sans-serif;
 }
@@ -34,24 +34,24 @@ section {
 }
 
 #about {
-    text-align: right;
+    text-align: center;
 }
 
 #about h2 {
-    color: red;
-    font-size: 20px;
-    font-weight: 900;
+    color: rgb(7, 201, 245);
+    font-size: 30px;
+    font-weight: 950;
 }
 
 #experience ul li {
     list-style: none;
     display: inline-block;
     margin: 0.5em;
-    background-color: rgb(190, 116, 184);
-    color: blanchedalmond;
+    background-color: rgb(248, 253, 199);
+    color: rgb(90, 58, 7);
     padding: 1cm;
     border-radius: 0.5em;
-    border-color: rgb(68, 11, 122);
+    border-color: rgb(68, 18, 115);
     border-style: solid;
 }
 
@@ -59,7 +59,7 @@ section {
     border-radius: 50%;
     margin: 1em;
     width: 30%;
-    border-color: gold;
+    border-color: rgb(196, 184, 115);
     border-width: 5dvi;
     border-style: outset;
 }
@@ -69,8 +69,8 @@ section {
     display: flexbox;
     margin: 3em;
     padding: 0.5em;
-    color: beige;
-    background-color: chocolate;
+    color: rgb(218, 218, 157);
+    background-color: rgb(52, 235, 225);
     border-radius: 0.8em;
 }
 
