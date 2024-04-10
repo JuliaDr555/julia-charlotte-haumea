@@ -1,0 +1,74 @@
+#name {
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+a {
+    color: white;
+}
+
+body {
+    height: 100vh;
+    background-color: rgba(193, 251, 233, 0.994);
+    font-family: "Roboto", sans-serif;
+}
+
+section {
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+#about {
+    text-align: center;
+}
+
+#about h2 {
+    color: rgb(7, 201, 245);
+    font-size: 30px;
+}
+
+#experience ul {
+padding: 0;
+}
+
+#experience ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0.5em;
+    background-color: rgb(248, 253, 199);
+    color: rgb(90, 58, 7);
+    padding: 1cm;
+    border-radius: 0.5em;
+    border-color: rgb(68, 18, 115);
+    border-style: solid;
+}
+
+img {
+    margin: 1em;
+    width: 30%;
+}
+
+.connect-list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.social-media-icon {
+    font-size: 40px !important;
+}
+
+#connect ul li {
+    list-style: none;
+    display: flex;
+    padding: 0.2em;
+    margin-right: 10px;
+    color: rgb(218, 218, 157);
+    background-color: rgb(52, 235, 225);
+    border-radius: 0.8em;
+}
