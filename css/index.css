@@ -1,66 +1,117 @@
-#name {
-    font-family: "Dancing Script", cursive;
-    font-size: 3rem;
-    font-style: italic;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-a {
-    color: white;
-}
 
 body {
+    margin: 0;
     height: 100vh;
     background-color: rgba(193, 251, 233, 0.994);
     font-family: "Roboto", sans-serif;
 }
 
 section {
-    padding: 1rem;
     margin-bottom: 3rem;
 }
 
-#about {
-    text-align: center;
+.container {
+    width: 80%;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+#navigation, #nameAndPicture, #about, #experience, #connect, #skills, #projects {
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-list {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.navigation-list a {
+    color: black;
+}
+
+#name {
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    /*font-style: italic;*/
+    padding-top: 1ch;
+}
+
+img {
+    width: 40%;
 }
 
 #about h2 {
-    color: rgb(7, 201, 245);
+    color: rgb(11, 128, 154);
     font-size: 30px;
+    text-align: center;
+}
+
+#about p {
+    text-align: center;
 }
 
 #experience ul {
 padding: 0;
 }
 
-#experience ul li {
+#experience ul li span{
     list-style: none;
-    display: inline-block;
+    display: flexbox;
     margin: 0.5em;
     background-color: rgb(248, 253, 199);
     color: rgb(90, 58, 7);
     padding: 1cm;
     border-radius: 0.5em;
-    border-color: rgb(68, 18, 115);
+    border-color: rgb(222, 235, 164);
     border-style: solid;
 }
 
-img {
-    margin: 1em;
-    width: 30%;
+.experience-container {
+    display:flex;
+    flex-direction: column;
+    gap: 10px; /* Space between rows and columns */
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(223, 236, 236);
+    color: rgb(54, 22, 96);
+    border-radius: 0.8em;
+    padding: 0.5em;
+}
+
+.date {
+    font-weight: bold;
+    min-width: fit-content;
+    }
+
+    
+#connect h2 {
+    text-align: center;
 }
 
 .connect-list {
     display: flex;
     justify-content: center;
     padding: 0;
+    margin-left: 10px;
+}
+
+.connect-list a {
+    color: white;
 }
 
 .social-media-icon {
-    font-size: 40px !important;
+    font-size: 35px !important;
 }
 
 #connect ul li {
@@ -69,6 +120,6 @@ img {
     padding: 0.2em;
     margin-right: 10px;
     color: rgb(218, 218, 157);
-    background-color: rgb(52, 235, 225);
+    background-color: rgb(133, 169, 167);
     border-radius: 0.8em;
 }
