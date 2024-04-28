@@ -2,44 +2,54 @@
 body {
     margin: 0;
     height: 100vh;
-    background-color: rgba(193, 251, 233, 0.994);
+    background-color: rgba(246, 230, 246, 0.994);
     font-family: "Roboto", sans-serif;
 }
 
 section {
-    margin-bottom: 3rem;
+    margin-bottom: 3em;
 }
 
 .container {
-    width: 80%;
+    width: 85%;
 }
 
 h2 {
     font-size: 2rem;
+    font-weight: bold;
+    color: rgb(172, 164, 246);
 }
 
 #navigation, #nameAndPicture, #about, #experience, #connect, #skills, #projects {
     display: flex;
     justify-content: center;
+    scroll-margin-top: 5rem;
 }
+
+a:hover {
+    opacity: 0.3;
+  } 
 
 .navigation-list {
     display: flex;
-    padding: 0;
+    padding-bottom: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between rows and columns */
     margin: 20px 0;
+    gap: 20px;
 }
 
 .navigation-list a {
-    color: black;
+    color: rgb(107, 61, 150);
 }
 
 #name {
-    font-family: "Dancing Script", cursive;
-    font-size: 3rem;
+    font-family: serif;
     /*font-style: italic;*/
     padding-top: 1ch;
+    color: rgb(118, 13, 216);
 }
 
 img {
@@ -47,7 +57,7 @@ img {
 }
 
 #about h2 {
-    color: rgb(11, 128, 154);
+    color: rgb(172, 164, 246);
     font-size: 30px;
     text-align: center;
 }
@@ -64,11 +74,10 @@ padding: 0;
     list-style: none;
     display: flexbox;
     margin: 0.5em;
-    background-color: rgb(248, 253, 199);
-    color: rgb(90, 58, 7);
+    background-color: rgb(214, 233, 46);
+    color: rgb(113, 243, 232);
     padding: 1cm;
     border-radius: 0.5em;
-    border-color: rgb(222, 235, 164);
     border-style: solid;
 }
 
@@ -80,19 +89,38 @@ padding: 0;
 
 .experience-item {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(178, 240, 240);
+    color: rgb(104, 58, 164);
+    border-radius: 1.5em;
+    padding: 0.5em;
+}
+.exp-description {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color:rgb(223, 236, 236);
-    color: rgb(54, 22, 96);
-    border-radius: 0.8em;
+    border-radius: 1em;
     padding: 0.5em;
 }
 
 .date {
+    display: flex;
+    flex-direction: column;
     font-weight: bold;
+    margin: 1em;
     min-width: fit-content;
     }
+
+.grid {
+    display: grid;
+    font-size: 10px;
+    padding: 0.5em;
+    background-color: rgb(224, 247, 158);
+    border-radius: 1em;
+    border-style: solid;
+}
 
     
 #connect h2 {
@@ -120,6 +148,21 @@ padding: 0;
     padding: 0.2em;
     margin-right: 10px;
     color: rgb(218, 218, 157);
-    background-color: rgb(133, 169, 167);
+    background-color: rgb(112, 119, 119);
     border-radius: 0.8em;
+}
+
+/*Larger screens (laptops and desktops) */
+@media (min-width: 700px) {
+    #navigation {
+        background-color:rgb(245, 239, 157) ;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width:700px) {
+    #navigation, #nameAndPicture, #about, #experience, #connect, #skills, #projects {
+        scroll-margin-top: 150px;
+        scroll-snap-align: start none;
+    }
 }
