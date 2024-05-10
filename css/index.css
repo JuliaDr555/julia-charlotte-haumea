@@ -21,7 +21,7 @@ h2 {
     color: rgb(172, 164, 246);
 }
 
-#navigation, #nameAndPicture, #about, #experience, #connect, #skills, #projects {
+#navigation, #nameAndPicture, #about, #experience, #connect, #skills, #projects, #leaveMessage, #messages {
     display: flex;
     justify-content: center;
     scroll-margin-top: 5rem;
@@ -111,6 +111,7 @@ padding: 0;
 #skills {
     text-align: center;
 }
+
 ul {
     display: flex;
     padding-bottom: 0;
@@ -151,6 +152,18 @@ ul {
     border-radius: 0.8em;
 }
 
+#leaveMessage {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+
+footer { 
+    text-align: center; 
+    margin-bottom: 50px;
+}
+
 /*Larger screens (laptops and desktops) */
 @media (min-width: 700px) {
     #navigation {
@@ -161,14 +174,14 @@ ul {
 
 /* Mobile */
 @media only screen and (max-width:700px) {
-    #navigation, #nameAndPicture, #about, #experience, #connect, #skills, #projects {
+    #navigation, #nameAndPicture, #about, #experience, #connect, #skills, #projects, #leaveMessage, #messages {
         scroll-margin-top: 150px;
         scroll-snap-align: start none;
     }
 }
 
 @media only screen and (min-width:360px) {
-    #navigation, #nameAndPicture, #about, #experience, #connect, #skills, #projects {
+    #navigation, #nameAndPicture, #about, #experience, #connect, #skills, #projects, #leaveMessage, #messages {
         scroll-margin-top: 150px;
         scroll-snap-align: start none;}
     }

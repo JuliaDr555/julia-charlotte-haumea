@@ -27,37 +27,39 @@
 
     <section id="nameAndPicture">
         <div class="container">
-        <h1 id="name"> Yuliya Drits </h1>
-        <img src="https://source.unsplash.com/featured/300x201" alt="myself" />
-    </div>
+            <h1 id="name"> Yuliya Drits </h1>
+            <img src="https://source.unsplash.com/featured/300x201" alt="myself" />
+        </div>
     </section>
 
     <section id="about">
         <div class="container">
-        <h2> About </h2>
-        <p> I study in Code the Dream, I study JavaScript, GitHub, Git, HTML, CSS.</p>
-    </div>
+            <h2> About </h2>
+            <p> I study in Code the Dream, I study JavaScript, GitHub, Git, HTML, CSS.</p>
+        </div>
     </section>
     <section id="experience">
         <div class="container">
-        <h2> Experience </h2>
-        <div class="grid-container">
-            <div class="grid-item">
-                <h3>Document preparation Specialist</h3>
-                <p class="exp-description">Registration, accounting, control and storage of various documents</p>
-                <span class="date">2006-2008</span>
+            <h2> Experience </h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Document preparation Specialist</h3>
+                    <p class="exp-description">Registration, accounting, control and storage of various documents</p>
+                    <span class="date">2006-2008</span>
+                </div>
+                <div class="grid-item">
+                    <h3>Leading Document preparation Specialist</h3>
+                    <p class="exp-description">Registration, accounting, control and storage of various documents</p>
+                    <span class="date">2008-2014</span>
+                </div>
+                <div class="grid-item">
+                    <div class="grid-item">
+                    <h3>Sales manager</h3>
+                    <p class="exp-description">Selling B2B services, concluding contracts</p>
+                    <span class="date">2015-2022</span>
+                    </div>
+                </div>
             </div>
-            <div class="grid-item">
-                <h3>Leading Document preparation Specialist</h3>
-                <p class="exp-description">Registration, accounting, control and storage of various documents</p>
-                <span class="date">2008-2014</span>
-            </div>
-            <div class="grid-item">
-                <h3>Sales manager</h3>
-                <p class="exp-description">Selling B2B services, concluding contracts</p>
-                <span class="date">2015-2022</span>
-            </div>
-        </div>
         </div>
     </section>
 
@@ -68,25 +70,57 @@
             <ul>
 
             </ul>
-        </div>    
-        </section>
+        </div>
+    </section>
 
-        <section id="projects">
-                <h2> Projects </h2>
-            </div>
-            </section>
+    <section id="projects">
+        <h2> Projects </h2>
+        </div>
+    </section>
 
     <section id="connect">
         <div class="container">
-        <h2> Connect </h2>
-        <ul class="connect-list">
-            <li><a href="mailto:Dr.juli537@gmail.com"><i class="social-media-icon lni lni-envelope"></i></a></li>
-            <li><a href="https://github.com/JuliaDr555"><i class="social-media-icon lni lni-github"></i></a></li>
-            <li><a href="https://www.instagram.com/julia_drits/"><i class="social-media-icon lni lni-instagram"></i></a></li>
-            <li><a href="https://www.facebook.com/julia.drits/"><i class="social-media-icon lni lni-facebook"></i></a></li>
-        </ul>
+            <h2> Connect </h2>
+            <ul class="connect-list">
+                <li><a href="mailto:Dr.juli537@gmail.com"><i class="social-media-icon lni lni-envelope"></i></a></li>
+                <li><a href="https://github.com/JuliaDr555"><i class="social-media-icon lni lni-github"></i></a></li>
+                <li><a href="https://www.instagram.com/julia_drits/"><i
+                            class="social-media-icon lni lni-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/julia.drits/"><i
+                            class="social-media-icon lni lni-facebook"></i></a></li>
+            </ul>
         </div>
     </section>
+
+
+    <section id="leaveMessage">
+        <div class="container">
+            <h2> Leave a Message </h2>
+            <form name="leave_message"> 
+
+                <label for="usersName">Name:</label>
+                <input type="text" id="usersName" name="usersName" required><br>
+
+                <label for="usersEmail">Email:</label>
+                <input type="email" id="usersEmail" name="usersEmail" required><br>
+
+                <label for="usersMessage">Message:</label>
+                <textarea id="usersMessage" name="usersMessage" required></textarea><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="message-section">
+        <div class="container">
+            <h2>Messages</h2>
+            <ul>
+
+            </ul>
+        </div>
+    </section>
+
     <script src="js/index.js"></script>
 
 </body>
