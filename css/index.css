@@ -14,6 +14,14 @@
         width: 85%;
     }
 
+    .flex {
+        display: flex;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
     h2 {
         text-align: center;
         font-size: 2rem;
@@ -82,7 +90,7 @@
 
     #nameAndPicture {
         padding-top: 70px;
-        float: right;
+        /* float: right; */
     }
 
     #name {
