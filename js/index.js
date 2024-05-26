@@ -80,37 +80,37 @@ messageForm.addEventListener("submit", function (event) {
 
 //Creating my fetch
 fetch('https://api.github.com/users/JuliaDr555/repos')
-.then((response) => {
-    if (response.ok) {
-        return response.text();
-    } else {
-        throw new Error("Failed to fetch repositories");
-    }
-})
-.then((data) => {
-    const repositories = JSON.parse(data);
+    .then((response) => {
+        if (response.ok) {
+            return response.text();
+        } else {
+            throw new Error("Failed to fetch repositories");
+        }
+    })
+    .then((data) => {
+        const repositories = JSON.parse(data);
 
-    const projectSection = document.getElementById("projects")
+        const projectSection = document.getElementById("projects")
 
-    let projectList = document.createElement("ul");
-    projectSection.appendChild(projectList);
+        let projectList = document.createElement("ul");
+        projectSection.appendChild(projectList);
 
-    for (let repository of repositories) {
+        for (let repository of repositories) {
 
-        let project = document.createElement("li");
+            let project = document.createElement("li");
 
-        project.innerText = repository.name;
+            project.innerText = repository.name;
 
-        projectList.appendChild(project);
-    }
-})
-.catch((error) => {
-    if (error instanceof SyntaxError) {
-        console.error("Unparsable response from server");
-    } else {
-        console.error("Error fething data: ", error.message);
-    }
-});
+            projectList.appendChild(project);
+        }
+    })
+    .catch((error) => {
+        if (error instanceof SyntaxError) {
+            console.error("Unparsable response from server");
+        } else {
+            console.error("Error fething data: ", error.message);
+        }
+    });
 
 
 /*// Getting DOM elements
