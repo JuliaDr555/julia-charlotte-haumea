@@ -111,31 +111,3 @@ fetch('https://api.github.com/users/JuliaDr555/repos')
             console.error("Error fething data: ", error.message);
         }
     });
-
-
-/*// Getting DOM elements
-const projectsSection = document.querySelector("#projects");
-const projectsList = projectsSection.querySelector("ul");
-
-// NOTE: Replace "response.json" below with the url to your GitHub profile: https://api.github.com/users/YOUR_USERNAME/repos
-
-fetch("response.json")
-  .then((res) => {
-    if (!res.ok) {
-      throw new Error("Something went wrong 😢");
-    }
-    return res.json();
-  })
-  .then((data) => {
-    for (let i = 0; i < data.length; i++) {
-      const project = document.createElement("li");
-      project.innerText = data[i].name;
-      projectsList.appendChild(project);
-    }
-  })
-  .catch((error) => {
-    const errorElement = document.createElement("p");
-    errorElement.innerText = error.message;
-    projectsSection.appendChild(errorElement);
-  });
-*/

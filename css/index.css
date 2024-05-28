@@ -2,7 +2,8 @@
         /*background: url(image-fone.jpg);*/
         margin: 0;
         height: 100vh;
-        background-color: rgba(246, 230, 246, 0.994);
+        /* background-color: rgba(246, 230, 246, 0.994); */
+        background-image: url("../img-fone1.jpeg");
         font-family: "Roboto", sans-serif;
     }
 
@@ -20,6 +21,8 @@
 
     .text-center {
         text-align: center;
+        line-height: 2.5;
+        margin: 10%;
     }
 
     h2 {
@@ -168,7 +171,7 @@
         text-align: center;
     }
 
-    #skills ul {
+    #skills ul, #projects ul {
         display: flex;
         justify-content: center;
     }
