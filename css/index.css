@@ -1,56 +1,294 @@
-    body {
-        /*background: url(image-fone.jpg);*/
-        margin: 0;
-        height: 100vh;
-        /* background-color: rgba(246, 230, 246, 0.994); */
-        background-image: url("../img-fone1.jpeg");
-        font-family: "Roboto", sans-serif;
-    }
+body {
+    /*background: url(image-fone.jpg);*/
+    margin: 0;
+    height: 100vh;
+    /* background-color: rgba(246, 230, 246, 0.994); */
+    background-image: url("../img-fone1.jpeg");
+    font-family: "Roboto", sans-serif;
+    background-size: cover;
+}
 
-    section {
-        margin-bottom: 3em;
-    }
+section {
+    margin-bottom: 3em;
+}
 
-    .container {
-        width: 85%;
-    }
+.container {
+    width: 85%;
+}
 
-    .flex {
-        display: flex;
-    }
+.imageAndAboutContainer {
+    display: flex;
+    flex-direction: row;
+}
 
-    .text-center {
-        text-align: center;
-        line-height: 2.5;
-        margin: 10%;
-    }
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(132, 120, 239);
+}
 
-    h2 {
-        text-align: center;
-        font-size: 2rem;
-        font-weight: bold;
-        color: rgb(132, 120, 239);
-    }
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+}
 
-    ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        list-style: none;
-        gap: 20px;
-        padding: 0;
-    }
+button {
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+}
 
-    button {
-        padding: 5px;
-        cursor: pointer;
-        border-radius: 5px;
-        border: 1px solid black;
-    }
+button:hover {
+    background-color: #f1dcf1;
+}
 
-    button:hover {
-        background-color: #f1dcf1;
+#navigation,
+#nameAndPicture,
+#about,
+#experience,
+#connect,
+#skills,
+#projects,
+#leaveMessage,
+#message-section {
+    display: flex;
+    justify-content: center;
+}
+
+a:hover {
+    opacity: 0.3;
+}
+
+#navigation {
+    position: fixed;
+    background-color: rgb(253, 249, 195);
+    width: 100%;
+}
+
+.navigation-list {
+    display: flex;
+    padding-bottom: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+    /* Space between rows and columns */
+    margin: 20px 0;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.navigation-list a {
+    color: rgb(107, 61, 150);
+}
+
+#nameAndPicture {
+    padding-top: 70px;
+    /* float: right; */
+}
+
+#name {
+    font-family: serif;
+    font-style: italic;
+    font-size: 35px;
+    padding-top: 1ch;
+    color: rgb(118, 28, 202);
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    border-radius: 2em;
+}
+
+.imageAndPhotoContainer {
+    display: inline-block;
+}
+
+#about h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+#about p {
+    text-align: center; 
+}
+
+.text-center {
+line-height: 300%; 
+margin: 40px;
+}
+
+#experience ul {
+    padding: 0;
+}
+
+#experience ul li {
+    height: 100%;
+}
+
+#experience h3 {
+    text-align: center;
+}
+
+#experience ul li span {
+    display: flex;
+    margin: 0.5em;
+    background-color: rgb(214, 233, 46);
+    color: rgb(196, 249, 244);
+    padding: 1cm;
+    border-radius: 0.5em;
+    border-style: solid;
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    /* Space between rows and columns */
+}
+
+.grid-item {
+    display: grid;
+    height: 100%;
+    background-color: rgb(210, 248, 248);
+    color: rgb(104, 58, 164);
+    border-radius: 1.5em;
+    padding: 0.5em;
+}
+
+.exp-description {
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
+.date {
+    font-weight: bold;
+    margin: 1em;
+    min-width: fit-content;
+    text-align: center;
+}
+
+#skills ul, #projects ul {
+    display: flex;
+    justify-content: center;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#skills li,
+#projects li {
+    border: 1px solid rgb(125, 145, 187);
+    width: 120px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(249, 251, 222);
+    text-align: center;
+}
+
+#connect h2 {
+    text-align: center;
+}
+
+.connect-list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.connect-list a {
+    color: white;
+}
+
+.social-media-icon {
+    font-size: 35px !important;
+}
+
+#connect ul li {
+    list-style: none;
+    display: flex;
+    padding: 0.2em;
+    margin-right: 10px;
+    color: rgb(218, 218, 157);
+    background-color: rgb(112, 119, 119);
+    border-radius: 0.8em;
+}
+
+#leaveMessage {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+#leaveMessage form {
+    width: 450px;
+}
+
+.leave-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message-item {
+    display: flex;
+    flex-direction: column;
+}
+
+#message-section {
+    display: none;
+    align-items: center;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.messages ul {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    align-items: center;
+}
+
+.messages ul a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(104, 58, 164);
+}
+
+.messages ul span {
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/*Larger screens (laptops and desktops) */
+/*@media (min-width: 700px) {
     }
+}*/
+
+/* Mobile */
+@media only screen and (max-width:700px) {
 
     #navigation,
     #nameAndPicture,
@@ -61,273 +299,47 @@
     #projects,
     #leaveMessage,
     #message-section {
-        display: flex;
-        justify-content: center;
-    }
-
-    a:hover {
-        opacity: 0.3;
-    }
-
-    #navigation {
-        position: fixed;
-        background-color: rgb(245, 239, 157);
-        width: 100%;
+        scroll-margin-top: 150px;
+        scroll-snap-align: start none;
     }
 
     .navigation-list {
-        display: flex;
-        padding-bottom: 0;
-        flex-direction: row;
-        flex-wrap: wrap;
-        list-style: none;
-        justify-content: space-between;
+        justify-content: space-around;
         /* Space between rows and columns */
-        margin: 20px 0;
-        gap: 20px;
-    }
-
-    .navigation-list a {
-        color: rgb(107, 61, 150);
-    }
-
-    #nameAndPicture {
-        padding-top: 70px;
-        /* float: right; */
-    }
-
-    #name {
-        font-family: serif;
-        font-style: italic;
-        font-size: 30px;
-        padding-top: 1ch;
-        color: rgb(142, 52, 226);
-        text-align: center;
     }
 
     img {
-        width: 400px;
-        border-radius: 2em;
-    }
-
-    #about h2 {
-        font-size: 30px;
-        text-align: center;
-    }
-
-    #about p {
-        text-align: center;
-    }
-
-    #experience ul {
-        padding: 0;
-    }
-
-    #experience ul li {
-        height: 100%;
-    }
-
-    #experience h3 {
-        text-align: center;
-    }
-
-    #experience ul li span {
-        display: flex;
-        margin: 0.5em;
-        background-color: rgb(214, 233, 46);
-        color: rgb(133, 243, 234);
-        padding: 1cm;
-        border-radius: 0.5em;
-        border-style: solid;
-    }
-
-    .grid-container {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 40px;
-        /* Space between rows and columns */
-    }
-
-    .grid-item {
-        display: grid;
-        height: 100%;
-        background-color: rgb(196, 248, 248);
-        color: rgb(104, 58, 164);
-        border-radius: 1.5em;
-        padding: 0.5em;
-    }
-
-    .exp-description {
-        border-radius: 1em;
-        padding: 0.5em;
-    }
-
-    .date {
-        font-weight: bold;
-        margin: 1em;
-        min-width: fit-content;
-        text-align: center;
-    }
-
-    #skills ul, #projects ul {
-        display: flex;
-        justify-content: center;
-    }
-
-    #projects {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #skills li,
-    #projects li {
-        border: 1px solid rgb(125, 145, 187);
-        width: 120px;
-        padding: 10px;
-        border-radius: 5px;
-        background-color: rgb(243, 246, 231);
-        text-align: center;
-    }
-
-    #connect h2 {
-        text-align: center;
-    }
-
-    .connect-list {
-        display: flex;
-        justify-content: center;
-        padding: 0;
-        margin-left: 10px;
-    }
-
-    .connect-list a {
-        color: white;
-    }
-
-    .social-media-icon {
-        font-size: 35px !important;
-    }
-
-    #connect ul li {
-        list-style: none;
-        display: flex;
-        padding: 0.2em;
-        margin-right: 10px;
-        color: rgb(218, 218, 157);
-        background-color: rgb(112, 119, 119);
-        border-radius: 0.8em;
-    }
-
-    #leaveMessage {
-        display: flex;
-        flex-direction: row;
-        justify-items: center;
+        width: 300px;
     }
 
     #leaveMessage form {
-        width: 450px;
-    }
-
-    .leave-message-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .message-item {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #message-section {
-        display: none;
-        align-items: center;
-    }
-
-    .messages {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         width: 100%;
     }
 
-    .messages ul {
-        display: flex;
-        flex-direction: column;
-        width: 85%;
+    .imageAndAboutContainer {
+        flex-direction: column-reverse;
+        align-items: center;
     }
+}
 
-    .messages ul a {
-        text-transform: uppercase;
-        font-weight: bold;
-        color: rgb(104, 58, 164);
+@media only screen and (min-width:360px) {
+
+    #navigation,
+    #nameAndPicture,
+    #about,
+    #experience,
+    #connect,
+    #skills,
+    #projects,
+    #leaveMessage,
+    #message-section {
+        scroll-margin-top: 150px;
+        scroll-snap-align: start none;
     }
+}
 
-    .messages ul span {
-        padding: 10px;
+@media only screen and (max-width:360px) {
+    img {
+        width: 100%;
     }
-
-    footer {
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    /*Larger screens (laptops and desktops) */
-    /*@media (min-width: 700px) {
-        }
-    }*/
-
-    /* Mobile */
-    @media only screen and (max-width:700px) {
-
-        #navigation,
-        #nameAndPicture,
-        #about,
-        #experience,
-        #connect,
-        #skills,
-        #projects,
-        #leaveMessage,
-        #message-section {
-            scroll-margin-top: 150px;
-            scroll-snap-align: start none;
-        }
-
-        .navigation-list {
-            justify-content: space-around;
-            /* Space between rows and columns */
-        }
-
-        img {
-            width: 300px;
-        }
-
-        #leaveMessage form {
-            width: 100%;
-        }
-    }
-
-    @media only screen and (min-width:360px) {
-
-        #navigation,
-        #nameAndPicture,
-        #about,
-        #experience,
-        #connect,
-        #skills,
-        #projects,
-        #leaveMessage,
-        #message-section {
-            scroll-margin-top: 150px;
-            scroll-snap-align: start none;
-        }
-    }
-
-    @media only screen and (max-width:360px) {
-        img {
-            width: 100%;
-        }
-    }
+}
