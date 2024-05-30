@@ -13,7 +13,7 @@ copyright.innerHTML = "&copy Yuliya Drits " + thisYear;
 
 footer.appendChild(copyright);
 
-// List of skills
+// List of skill
 const skills = ["JavaScript", "HTML", "CSS", "GitHub", "Git", "Microsoft Word", "Microsoft Excel", "Paint"]
 const skillsSection = document.getElementById("skills");
 const skillsList = skillsSection.querySelector("ul");
@@ -37,12 +37,12 @@ messageForm.addEventListener("submit", function (event) {
     const usersEmail = event.target.usersEmail.value;
     const usersMessage = event.target.usersMessage.value;
 
-     // Log the form data
+    // Log the form data
     console.log("Name:", usersName);
     console.log("Email", usersEmail);
     console.log("Message", usersMessage);
 
-// Create a new message element and append it to the message list
+    // Create a new message element and append it to the message list   
     const messageSection = document.getElementById("message-section");
     const messageList = messageSection.querySelector("ul");
     const newMessage = document.createElement("li");
@@ -80,7 +80,6 @@ messageForm.addEventListener("submit", function (event) {
     }
 });
 
-
 //Creating my fetch
 fetch('https://api.github.com/users/JuliaDr555/repos')
     .then((response) => {
@@ -93,7 +92,7 @@ fetch('https://api.github.com/users/JuliaDr555/repos')
     .then((data) => {
         const repositories = JSON.parse(data);
 
-         // Add projects to the projects section
+        // Add projects to the projects section
         const projectSection = document.getElementById("projects")
 
         let projectList = document.createElement("ul");
@@ -121,3 +120,4 @@ fetch('https://api.github.com/users/JuliaDr555/repos')
             console.error("Error fething data: ", error.message);
         }
     });
+
