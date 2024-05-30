@@ -1,8 +1,11 @@
 body {
     margin: 0;
     height: 100vh;
-    background-color: rgba(246, 230, 246, 0.994);
+    font-size: 18px;
+    line-height: 1.6;
+    background-image: url("../img-fone1.jpeg");
     font-family: "Roboto", sans-serif;
+    background-size: cover;
 }
 
 section {
@@ -13,35 +16,62 @@ section {
     width: 85%;
 }
 
+.imageAndAboutContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.aboutContainer {
+    background-color: rgb(252, 250, 250);
+    border-radius: 1em;
+}
+
 h2 {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    color: rgb(132, 120, 239);
+    color: rgb(98, 58, 172);
 }
 
 ul {
     display: flex;
-    padding-bottom: 0;
     flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
-    justify-content: space-between;
     gap: 20px;
+    padding: 0;
 }
 
-#navigation, #nameAndPicture, #about, #experience, #connect, #skills, #projects, #leaveMessage, #message-section {
+button {
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+button:hover {
+    background-color: #f1dcf1;
+}
+
+#navigation,
+#about,
+#experience,
+#connect,
+#skills,
+#projects,
+#leaveMessage,
+#message-section {
     display: flex;
     justify-content: center;
 }
 
 a:hover {
     opacity: 0.3;
-  } 
+}
 
 #navigation {
-    position:fixed;
-    background-color:rgb(245, 239, 157);
+    position: fixed;
+    background-color: rgb(245, 254, 177);
     width: 100%;
 }
 
@@ -51,70 +81,100 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
-    justify-content: space-between; /* Space between rows and columns */
+    justify-content: space-between;
+    /* Space between rows and columns */
     margin: 20px 0;
     gap: 20px;
+    font-weight: bold;
 }
 
 .navigation-list a {
-    color: rgb(107, 61, 150);
+    color: rgb(104, 60, 145);
 }
 
-#nameAndPicture {
-    padding-top: 70px;
+#about {
+    padding-top: 30px;
 }
 
 #name {
     font-family: serif;
-    font-style:italic;
-    font-size: 30px;
+    font-style: italic;
+    font-size: 35px;
     padding-top: 1ch;
-    color: rgb(142, 52, 226);
+    color: rgb(105, 22, 183);
+    text-align: center;
 }
 
 img {
-    width: 40%;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 1em;
+    margin-inline: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow for depth */
+}
+
+.imageAndPhotoContainer {
+    display: inline-block;
 }
 
 #about h2 {
     font-size: 30px;
-    text-align: center;
+    text-align: left;
+    margin-inline: 20px;
+    margin-top: 30px;
+    padding-left: 60px;
 }
 
-#about p {
-    text-align: center;
+.text-center {
+    line-height: 2;
+    margin: 0 40px;
+    margin-bottom: 30px;
+    text-indent: +2.5em;
 }
 
 #experience ul {
-padding: 0;
+    padding: 0;
 }
 
-#experience ul li span{
+#experience ul li {
+    height: 100%;
+}
+
+#experience h3 {
+    text-align: center;
+}
+
+#experience ul li span {
     display: flex;
     margin: 0.5em;
     background-color: rgb(214, 233, 46);
-    color: rgb(133, 243, 234);
+    color: rgb(196, 249, 244);
     padding: 1cm;
     border-radius: 0.5em;
     border-style: solid;
 }
 
 .grid-container {
-    display:grid;
+    display: grid;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 10px; /* Space between rows and columns */
+    grid-gap: 40px;
+    /* Space between rows and columns */
 }
 
 .grid-item {
-    display: grid; 
+    display: grid;
+    height: 100%;
+    background-color: rgb(210, 248, 248);
     place-items: center;
-    background-color:rgb(196, 248, 248);
-    color: rgb(104, 58, 164);
+    background-color: rgb(213, 251, 251);
+    color: rgb(92, 45, 153);
     border-radius: 1.5em;
     padding: 0.5em;
 }
+
 .exp-description {
     border-radius: 1em;
     padding: 0.5em;
@@ -124,23 +184,32 @@ padding: 0;
     font-weight: bold;
     margin: 1em;
     min-width: fit-content;
-    }
-
-#skills, #projects {
     text-align: center;
 }
 
-#skills ul {
+#skills ul,
+#projects ul {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
-#skills li, #projects li {
-    border: 1px solid rgb(125, 145, 187);
-    width: 120px;
+#skills,
+#projects {
+    text-align: center;
+}
+
+#skills li,
+#projects li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(106, 29, 136);
+    box-shadow: 0px 18px 22px rgba(207, 110, 110, 0.1);
+    width: 140px;
     padding: 10px;
     border-radius: 5px;
-    background-color: rgb(243, 246, 231);
+    background-color: rgb(243, 246, 227);
+    text-align: center;
 }
 
 #projects {
@@ -181,39 +250,163 @@ padding: 0;
 #leaveMessage {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    justify-items: center;
+}
+
+#leaveMessage form {
+    width: 500px;
 }
 
 #message-section {
     display: none;
 }
 
-footer { 
-    text-align: center; 
-    margin-bottom: 50px;
+.leave-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/*Larger screens (laptops and desktops) */
-/*@media (min-width: 700px) {
-    #navigation {
-        background-color:rgb(245, 239, 157) ;
-        flex-direction: column;
-    }
-}*/
+.message-item {
+    display: flex;
+    flex-direction: column;
+}
+
+#message-section {
+    display: none;
+    align-items: center;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.messages ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.messages ul a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(104, 58, 164);
+}
+
+.messages ul span {
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
 
 /* Mobile */
 @media only screen and (max-width:700px) {
-    #navigation, #nameAndPicture, #about, #experience, #connect, #skills, #projects, #leaveMessage, #message-section {
+
+    #navigation,
+    #nameAndPicture,
+    #about,
+    #experience,
+    #connect,
+    #skills,
+    #projects,
+    #leaveMessage,
+    #message-section {
         scroll-margin-top: 150px;
         scroll-snap-align: start none;
     }
+
     .navigation-list {
-        justify-content: space-around; /* Space between rows and columns */
+        justify-content: space-around;
+        /* Space between rows and columns */
+    }
+
+    #name {
+        padding-top: 50px;
+
+    }
+
+    #about h2 {
+        text-align: center;
+        padding: 0;
+    }
+
+    #leaveMessage form {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:950px) {
+    .imageAndAboutContainer {
+        flex-direction: column-reverse;
+        align-items: center;
+        row-gap: 15px;
+    }
+
+    #about h2 {
+        text-align: center;
     }
 }
 
 @media only screen and (min-width:360px) {
-    #navigation, #nameAndPicture, #about, #experience, #connect, #skills, #projects, #leaveMessage, #message-section {
-        scroll-margin-top: 150px;
-        scroll-snap-align: start none;}
+
+    #navigation,
+    #nameAndPicture,
+    #about,
+    #experience,
+    #connect,
+    #skills,
+    #projects,
+    #leaveMessage,
+    #message-section {
+
+        #navigation,
+        #nameAndPicture,
+        #about,
+        #experience,
+        #connect,
+        #skills,
+        #projects,
+        #leaveMessage,
+        #message-section {
+
+            scroll-margin-top: 150px;
+            scroll-snap-align: start none;
+        }
+
+        .navigation-list {
+            justify-content: space-around;
+            /* Space between rows and columns */
+        }
+
     }
+
+
+    @media only screen and (max-width:360px) {
+        img {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (min-width:360px) {
+
+        #navigation,
+        #nameAndPicture,
+        #about,
+        #experience,
+        #connect,
+        #skills,
+        #projects,
+        #leaveMessage,
+        #message-section {
+            scroll-margin-top: 150px;
+            scroll-snap-align: start none;
+        }
+    }
+
+}

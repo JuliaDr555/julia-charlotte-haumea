@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuliya Drits</title>
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="css/index.css" />
+    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link to Roboto font from Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <!-- Link to LineIcons -->
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
 </head>
 
 <body id="body">
+    <!-- Navigation Menu -->
     <nav id="navigation">
         <ul class="navigation-list container">
             <li><a href=#about>About</a></li>
@@ -25,19 +30,29 @@
         </ul>
     </nav>
 
-    <section id="nameAndPicture">
+    <!-- Section with Name and Picture -->
+    <section id="about">
         <div class="container">
             <h1 id="name"> Yuliya Drits </h1>
-            <img src="https://source.unsplash.com/featured/300x201" alt="myself" />
+            <div class="imageAndAboutContainer">
+                <!-- About section -->
+                <div class="aboutContainer">
+                    <h2>About</h2>
+                    <p class="text-center">I'm a student at Code the Dream and specialize in JavaScript, GitHub, Git,
+                        HTML, and CSS. <br> In the past, I have extensive and successful experience in the field of
+                        logistics, as well as in sales of communication services. But driven by a passion for continuous
+                        learning and improvement, I eagerly accept new challenges and opportunities for growth, which is
+                        why I was drawn to the field of Information Technology. <br> Next, I plan to continue my journey
+                        of learning and improving my skills in this area.
+                    </p>
+                </div>
+                <!-- Image -->
+                <img src="./image1.jpg" />
+            </div>
         </div>
     </section>
 
-    <section id="about">
-        <div class="container">
-            <h2> About </h2>
-            <p> I study in Code the Dream, I study JavaScript, GitHub, Git, HTML, CSS.</p>
-        </div>
-    </section>
+    <!-- Section for Experience -->
     <section id="experience">
         <div class="container">
             <h2> Experience </h2>
@@ -63,6 +78,7 @@
         </div>
     </section>
 
+    <!-- Section for Skills -->
     <section id="skills">
         <div class="container">
             <h2> Skills </h2>
@@ -70,10 +86,14 @@
         </div>
     </section>
 
+    <!-- Section for Projects -->
     <section id="projects">
-        <h2> Projects </h2>
+        <div class="container">
+            <h2> Projects </h2>
+        </div>
     </section>
 
+    <!-- Section for Connect -->
     <section id="connect">
         <div class="container">
             <h2> Connect </h2>
@@ -88,35 +108,41 @@
         </div>
     </section>
 
-
+    <!-- Section for Leave a Message -->
     <section id="leaveMessage">
-        <div class="container">
+        <div class="leave-message-container container">
             <h2> Leave a Message </h2>
-            <form name="leave_message">
 
-                <label for="usersName">Name:</label>
-                <input type="text" id="usersName" name="usersName" required><br>
-
-                <label for="usersEmail">Email:</label>
-                <input type="email" id="usersEmail" name="usersEmail" required><br>
-
-                <label for="usersMessage">Message:</label>
-                <textarea id="usersMessage" name="usersMessage" required></textarea><br>
+            <form name="leave_message-form">
+                <div class="message-item">
+                    <label for="usersName">Name:</label>
+                    <input type="text" id="usersName" name="usersName" required><br>
+                </div>
+                <div class="message-item">
+                    <label for="usersEmail">Email:</label>
+                    <input type="email" id="usersEmail" name="usersEmail" required><br>
+                </div>
+                <div class="message-item">
+                    <label for="usersMessage">Message:</label>
+                    <textarea id="usersMessage" name="usersMessage" required></textarea><br>
+                </div>
 
                 <button type="submit">Submit</button>
             </form>
         </div>
     </section>
 
+    <!-- Section for Messages -->
     <section id="message-section">
-        <div class="container">
-            <h2> Messages </h2>
-            <ul>
-
-            </ul>
-        </div>
+        <div class="messages container">
+            <div class="container">
+                <h2> Messages </h2>
+                <ul>
+                </ul>
+            </div>
     </section>
 
+    <!-- Link to your JavaScript file -->
     <script src="js/index.js"></script>
 
 </body>

@@ -5,15 +5,15 @@ const footer = document.createElement("footer");
 const body = document.body;
 body.appendChild(footer);
 
-
+// Create copyright text and append it to the footer
 const today = new Date();
 const thisYear = today.getFullYear();
-const footer2 = document.querySelector("footer");
 const copyright = document.createElement("p");
-copyright.innerHTML = "&copyYuliya Drits " + thisYear;
+copyright.innerHTML = "&copy Yuliya Drits " + thisYear;
 
 footer.appendChild(copyright);
 
+// List of skill
 const skills = ["JavaScript", "HTML", "CSS", "GitHub", "Git", "Microsoft Word", "Microsoft Excel", "Paint"]
 const skillsSection = document.getElementById("skills");
 const skillsList = skillsSection.querySelector("ul");
@@ -27,27 +27,30 @@ for (let i = 0; i < skills.length; i++) {
 }
 
 //Add events for the message form
-const messageForm = document.querySelector('form[name="leave_message"]');
+const messageForm = document.querySelector('form[name="leave_message-form"]');
 
 messageForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
+    // Get values from the form
     const usersName = event.target.usersName.value;
     const usersEmail = event.target.usersEmail.value;
     const usersMessage = event.target.usersMessage.value;
 
+    // Log the form data
     console.log("Name:", usersName);
     console.log("Email", usersEmail);
     console.log("Message", usersMessage);
 
-
+    // Create a new message element and append it to the message list   
     const messageSection = document.getElementById("message-section");
     const messageList = messageSection.querySelector("ul");
     const newMessage = document.createElement("li");
     newMessage.innerHTML = `<a href="mailto:${usersEmail}">${usersName}</a>: <span>${usersMessage}</span>`;
 
+    // Add remove button to each message
     const removeButton = document.createElement("button");
-    removeButton.innerText = "remove";
+    removeButton.innerText = "Remove";
     removeButton.type = "button";
 
     removeButton.addEventListener("click", function () {
@@ -57,8 +60,9 @@ messageForm.addEventListener("submit", function (event) {
         // Check if the message list is empty
         if (messageList.children.length === 0) {
             messageSection.style.display = "none";
+            messageSection.style.justifyContent = "center";
         } else {
-            messageSection.style.display = "block";
+            messageSection.style.display = "flex";
         }
     });
 
@@ -76,66 +80,44 @@ messageForm.addEventListener("submit", function (event) {
     }
 });
 
-
-
 //Creating my fetch
 fetch('https://api.github.com/users/JuliaDr555/repos')
-.then((response) => {
-    if (response.ok) {
-        return response.text();
-    } else {
-        throw new Error("Failed to fetch repositories");
-    }
-})
-.then((data) => {
-    const repositories = JSON.parse(data);
+    .then((response) => {
+        if (response.ok) {
+            return response.text();
+        } else {
+            throw new Error("Failed to fetch repositories");
+        }
+    })
+    .then((data) => {
+        const repositories = JSON.parse(data);
 
-    const projectSection = document.getElementById("projects")
+        // Add projects to the projects section
+        const projectSection = document.getElementById("projects")
 
-    let projectList = document.createElement("ul");
-    projectSection.appendChild(projectList);
+        let projectList = document.createElement("ul");
+        projectSection.appendChild(projectList);
 
-    for (let repository of repositories) {
+        for (let repository of repositories) {
 
-        let project = document.createElement("li");
+            let project = document.createElement("li");
 
-        project.innerText = repository.name;
+            let projectLink = document.createElement("a");
+            projectLink.href = repository.html_url;
+            projectLink.innerText = repository.name;
+            projectLink.target = "_blank";
 
-        projectList.appendChild(project);
-    }
-})
-.catch((error) => {
-    if (error instanceof SyntaxError) {
-        console.error("Unparsable response from server");
-    } else {
-        console.error("Error fething data: ", error.message);
-    }
-});
+            project.appendChild(projectLink);
 
+            projectList.appendChild(project);
+        }
+    })
+    .catch((error) => {
+        // Handle errors
+        if (error instanceof SyntaxError) {
+            console.error("Unparsable response from server");
+        } else {
+            console.error("Error fething data: ", error.message);
+        }
+    });
 
-/*// Getting DOM elements
-const projectsSection = document.querySelector("#projects");
-const projectsList = projectsSection.querySelector("ul");
-
-// NOTE: Replace "response.json" below with the url to your GitHub profile: https://api.github.com/users/YOUR_USERNAME/repos
-
-fetch("response.json")
-  .then((res) => {
-    if (!res.ok) {
-      throw new Error("Something went wrong 😢");
-    }
-    return res.json();
-  })
-  .then((data) => {
-    for (let i = 0; i < data.length; i++) {
-      const project = document.createElement("li");
-      project.innerText = data[i].name;
-      projectsList.appendChild(project);
-    }
-  })
-  .catch((error) => {
-    const errorElement = document.createElement("p");
-    errorElement.innerText = error.message;
-    projectsSection.appendChild(errorElement);
-  });
-*/
